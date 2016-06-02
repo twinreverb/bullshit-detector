@@ -1,0 +1,79 @@
+<a href="javascript:(function () {
+  var buzzwords = [
+        'leverage',
+        'leveraging',
+        'engagement',
+        'connected',
+        'catalyst',
+        'driving',
+        'insights',
+        'brand',
+        'branding',
+        'experiences',
+        'passion',
+        'passionate',
+        'mission',
+        'collaboration',
+        'collaborative',
+        'pixel-perfect',
+        'pixel perfect',
+        'cutting-edge',
+        'cutting edge',
+        'disrupt',
+        'disruptive',
+        'disrupting',
+        'revolutionize',
+        'revolutionary',
+        'ninja',
+        'unicorn',
+        'rock star',
+        'full-stack',
+        'full stack',
+        'innovative',
+        'conversion',
+        'guru'
+      ],
+      i,
+      bsMeter = document.createElement('div'),
+      bsMeterHeading = document.createElement('h1'),
+      bsMeterImg = document.createElement('img'),
+      bsMeterCSS = 'position: fixed; z-index: 9999; top: 0; right: 0; left: 0; background-color: #f00; color: #eff0ff; padding: 15px; text-align: center;',
+      bsMeterImgCSS = 'position: absolute; top: 0; right: 0; width: auto; height: 180px;',
+      bsCount,
+      scaleIndicator,
+      level1Threshold = 4,
+      level2Threshold = 9,
+      level3Threshold = 10,
+      src = document.body.innerHTML.toLowerCase();
+  for (i = 0; i < buzzwords.length; i++) {
+    src = src.replace(buzzwords[i], '<span class=\'bs-warning\' style=\'color: #f00; font-weight: 600;\'>NOT A REAL THING</span>');
+    document.body.innerHTML = src;
+  }
+
+  bsCount = document.getElementsByClassName('bs-warning');
+  bsMeterHeading.innerHTML = 'This job posting has a buzzword count of: ' + bsCount.length;
+
+  if (bsCount.length > 0 && bsCount.length <= level1Threshold) {
+    scaleIndicator = 'http://45.media.tumblr.com/d6fc3206df1daf5baa1fe49d716a73bc/tumblr_mtuix0Wzya1sj3oxho1_500.gif';
+  } else if (bsCount.length > level1Threshold && bsCount.length <= level2Threshold) {
+    bsMeterHeading.innerHTML = bsMeterHeading.innerHTML + '. I\'d think twice.';
+    scaleIndicator = 'https://img.buzzfeed.com/buzzfeed-static/static/2014-10/16/10/enhanced/webdr08/anigif_enhanced-6429-1413469284-12.gif';
+  } else if (bsCount.length >= level3Threshold) {
+    bsMeterHeading.innerHTML = bsMeterHeading.innerHTML + '. Close this tab and run the other way.';
+    scaleIndicator = 'https://media.giphy.com/media/nEIGIYWWEO8vK/giphy.gif';
+  } else {
+    scaleIndicator = 'http://i.imgur.com/IpHu8p5.gif';
+    bsMeterHeading.innerHTML = 'Whoa! This job posting is buzzword-free! Apply now!';
+  }
+
+  bsMeterImg.setAttribute('src', scaleIndicator);
+  bsMeterImg.setAttribute('alt', 'This is total bullshit');
+  bsMeterImg.setAttribute('style', bsMeterImgCSS);
+  bsMeter.setAttribute('style', bsMeterCSS);
+
+  bsMeter.appendChild(bsMeterHeading);
+  bsMeter.appendChild(bsMeterImg);
+
+  document.body.appendChild(bsMeter);
+
+})();">Buzzwords!</a>
