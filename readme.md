@@ -28,7 +28,7 @@ Do you have a different idea of what buzzwords are deal breakers for you?
 Customizing the Bullshit Detector is easy.
 
   1. Open the HTML file in a text editor. 
-  2. Look for the `buzzwords` list that starts on line x.
+  2. Look for the `buzzwords` list that starts on line 2.
   3. Add or remove items from the list. Just make sure your buzzwords are enclosed
   in quotes and are followed by a comma. Use the existing list as an example.
   4. Save your changes, open the file in a browser and drag the link to the 
