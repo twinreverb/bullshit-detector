@@ -1,9 +1,9 @@
 # Job Hunt Bullshit Detector
 
 Looking for a job sucks, right? It's all "rock star" this, "ninja" that, 
-"know every program language ever created". Sorting through these job posts is 
-frustrating at best. Don't you wish there was a way to tell at a glance if a 
-particular job is worth your time? _Well, now you can!_
+"know every programming language ever created". Sorting through these job posts
+is frustrating at best. Don't you wish there was a way to tell at a glance if a 
+particular job is worth your time? _Well, now there is!_
 
 This handy bookmarklet checks the contents of a job description against a list
 of total bullshit requirements. Is this delusional hiring manager looking for 
